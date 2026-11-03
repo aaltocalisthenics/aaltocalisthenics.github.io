@@ -1,0 +1,331 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Aalto Calisthenics</title>
+<meta name="description" content="Aalto Calisthenics – Disce · Exerce · Excelle. Bodyweight training: pull-ups, dips and handstands at Otaniemi Sports Park. Come and train with us!">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="favicon-192.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<style>
+@font-face{font-family:Inter;font-style:normal;font-weight:100 900;font-display:swap;src:url(fonts/inter-latin.woff2) format("woff2")}
+@font-face{font-family:Cinzel;font-style:normal;font-weight:500;font-display:swap;src:url(fonts/cinzel-500-latin.woff2) format("woff2")}
+@font-face{font-family:"Cormorant Garamond";font-style:italic;font-weight:500;font-display:swap;src:url(fonts/cormorant-garamond-500-italic-latin.woff2) format("woff2")}
+body{margin:0;background:#f4f4f4}
+.svg-defs{position: absolute;width: 0;height: 0;overflow: hidden}
+.page-base{min-height: 100vh;box-sizing: border-box;padding: 2rem;background: #f4f4f4;color: #000;font-family: Inter, Helvetica, sans-serif;text-transform: uppercase}
+.page-inner-base{max-width: 1200px;margin: 0 auto;display: flex;flex-direction: column;gap: 2rem}
+.site-header{display: flex;flex-wrap: wrap;justify-content: space-between;align-items: center;gap: 1rem;border-bottom: 2px solid #000;padding-bottom: 1rem}
+.logo-h1{margin: 0;line-height: 0}
+.logo-img{height: 80px;width: auto;display: block}
+.motto{flex: 1 1 auto;display: flex;flex-direction: column;align-items: center;gap: 0.375rem;text-align: center}
+.motto-la{margin: 0;display: flex;align-items: center;gap: 0.75rem;font-family: Cinzel, 'Times New Roman', serif;font-weight: 500;font-size: 1.25rem;letter-spacing: 0.2em;text-transform: none;white-space: nowrap;cursor: default}
+.rule{width: 32px;height: 1px;background: #000;flex: none}
+.motto-en{margin: 0;font-family: 'Cormorant Garamond', Georgia, serif;font-style: italic;font-weight: 500;font-size: 1rem;letter-spacing: 0.06em;text-transform: none;color: #444;white-space: nowrap;cursor: default}
+.nav{display: flex;flex-wrap: wrap;align-items: center;gap: 1.5rem}
+.join-btn{display: flex;align-items: center;height: 44px;padding: 0 1rem;border: 2px solid #000;box-sizing: border-box;background: #fff;text-decoration: none;font-weight: 900;font-size: 1.125rem;letter-spacing: 0.04em}
+.social{display: flex;gap: 0.5rem;padding-left: 1.5rem;border-left: 2px solid #000}
+.icon-btn{width: 44px;height: 44px;display: flex;align-items: center;justify-content: center;border: 2px solid #000;box-sizing: border-box}
+.lang{display: flex;border: 2px solid #000}
+.lang-link{min-width: 44px;height: 40px;display: flex;align-items: center;justify-content: center;padding: 0 0.5rem;box-sizing: border-box;font-weight: 800;font-size: 0.875rem;text-decoration: none}
+.lang-current-sep{min-width: 44px;height: 40px;display: flex;align-items: center;justify-content: center;padding: 0 0.5rem;box-sizing: border-box;font-weight: 800;font-size: 0.875rem;text-decoration: none;background: #000;color: #fff;border-left: 2px solid #000}
+.lang-link-sep{min-width: 44px;height: 40px;display: flex;align-items: center;justify-content: center;padding: 0 0.5rem;box-sizing: border-box;font-weight: 800;font-size: 0.875rem;text-decoration: none;border-left: 2px solid #000}
+.hero{display: flex;flex-wrap: wrap;border: 2px solid #000;background: #fff}
+.hero-photo{flex: 2 1 520px;min-width: 0;min-height: 420px;position: relative;overflow: hidden;background: repeating-linear-gradient(45deg, #e6e6e6 0 12px, #f4f4f4 12px 24px)}
+.hero-img{position: absolute;inset: 0;width: 100%;height: 100%;object-fit: cover;object-position: 50% 25%;display: block}
+.logo-box-base{flex: 1 1 300px;min-height: 360px;border-left: 2px solid #000;background: #fff;display: flex;align-items: center;justify-content: center;padding: 2rem;box-sizing: border-box}
+.ld-view{position: relative;width: 100%;max-width: 280px;height: 270px;overflow: hidden;margin: 0 auto}
+.ld-frame{height: 270px;display: flex;flex-direction: column;align-items: center;justify-content: center;gap: 1rem;text-align: center}
+.svg-fit{max-width: 100%;height: auto}
+.ld-word{margin: 0;font-weight: 900;font-size: 1.25rem;letter-spacing: -0.25px;white-space: nowrap;padding-left: 1.5em}
+.ghost{color: transparent}
+.dots{display: inline-block;width: 1.5em;text-align: left}
+.ld-bar-fill{display: grid;grid-template-columns: repeat(4, minmax(0, 1fr));gap: 4px;width: 100%;height: 20px;padding: 4px;border: 2px solid transparent;box-sizing: border-box}
+.cell-off{background: transparent}
+.ld-pct{font-weight: 800;font-size: 0.875rem;font-variant-numeric: tabular-nums}
+.cell-on{background: #000}
+.ld-static{position: absolute;inset: 0;height: 270px;display: flex;flex-direction: column;align-items: center;justify-content: center;gap: 1rem;text-align: center}
+.ld-bar{display: grid;grid-template-columns: repeat(4, minmax(0, 1fr));gap: 4px;width: 100%;height: 20px;padding: 4px;border: 2px solid #000;box-sizing: border-box}
+.ld-pct-ghost{font-weight: 800;font-size: 0.875rem;font-variant-numeric: tabular-nums;visibility: hidden}
+.grid{display: grid;grid-template-columns: repeat(auto-fit, minmax(min(100%, 420px), 1fr));gap: 2rem}
+.col{display: flex;flex-direction: column;gap: 1rem}
+.card{border: 2px solid #000;padding: 2rem;background: #fff}
+.box-title{font-size: 2.5rem;font-weight: 800;margin: 0 0 1rem;border-bottom: 1px solid #000;padding-bottom: 0.5rem}
+.row{display: flex;justify-content: space-between;gap: 1rem;border-bottom: 1px dashed #000;padding: 0.5rem 0}
+.row-label{font-weight: 700}
+.row-info{display: flex;justify-content: space-between;align-items: center;gap: 1rem;border-bottom: 1px dashed #000;padding: 0.5rem 0}
+.row-value{text-align: right}
+.row-last{display: flex;justify-content: space-between;align-items: center;gap: 1rem;padding: 0.75rem 0 0}
+.map-icons{display: flex;gap: 0.5rem}
+.faq-box-base{border: 2px solid #000;padding: 2rem;background: #fff;align-self: start}
+.faq-item{border-bottom: 1px dashed #000}
+.faq-q{display: flex;justify-content: space-between;align-items: center;gap: 1rem;min-height: 44px;padding: 0.5rem 0;font-weight: 700}
+.faq-icon{font-weight: 900;font-size: 1.5rem;line-height: 1}
+.faq-answer{margin: 0 0 1rem;text-transform: none;line-height: 1.5}
+.faq-link{font-weight: 700;text-decoration: underline;text-underline-offset: 3px}
+.welcome-base{margin: 0;padding: 0.5rem 0 1rem;display: flex;align-items: center;justify-content: center;gap: 0.75rem;text-align: center;font-family: Cinzel, 'Times New Roman', serif;font-weight: 500;font-size: 1.375rem;letter-spacing: 0.2em;white-space: nowrap;cursor: default}
+a{color:#000}a:hover{color:#0056b3}
+summary{list-style:none;cursor:pointer}summary::-webkit-details-marker{display:none}details[open] .faq-plus{transform:rotate(45deg)}.faq-plus{transition:transform .15s ease}
+
+/* Puhelin / phone */
+@media (max-width: 700px){
+.page{padding:1rem !important}
+.page-inner{gap:1.25rem !important}
+header{gap:.75rem !important}
+.hdr-nav{display:contents !important}
+.hdr-logo{order:1}
+.hdr-logo img{height:64px !important}
+.hdr-social{order:2;margin-left:auto;padding-left:0 !important;border-left:0 !important}
+.hdr-lang{order:3}
+.hdr-motto{order:4;flex-basis:100% !important}
+.hdr-motto p[lang=la]{font-size:.875rem !important;letter-spacing:.14em !important;gap:.5rem !important}
+.hdr-motto p[lang=la] span{width:18px !important}
+.hdr-join{order:5;margin:0 auto}
+.welcome{font-size:.75rem !important;letter-spacing:.06em !important;white-space:nowrap;gap:.5rem !important}
+.welcome span{width:12px !important}
+.car{flex-basis:100% !important;min-height:300px !important}
+.logo-box{border-left:0 !important;border-top:2px solid #000;min-height:0 !important;padding:1.5rem !important}
+.page h2{font-size:2rem !important}
+.page section > div, .faq-box{padding:1.5rem !important}
+.sched-row{flex-direction:column !important;gap:.25rem !important;padding:.75rem 0 !important}
+.sched-row > div:last-child{font-size:.875rem}
+.info-row{flex-direction:column !important;align-items:flex-start !important;gap:.25rem !important;padding:.75rem 0 !important}
+.info-row > div:last-child{text-align:left !important;font-size:.875rem}
+}
+.ld-strip{animation:strip 2.5s steps(5) infinite}
+@keyframes strip{to{transform:translateY(-1350px)}}
+.td{opacity:0}
+.td1{animation:td1 2.5s step-end infinite}
+.td2{animation:td2 2.5s step-end infinite}
+.td3{animation:td3 2.5s step-end infinite}
+@keyframes td1{0%{opacity:0}20%{opacity:1}100%{opacity:1}}
+@keyframes td2{0%{opacity:0}40%{opacity:1}100%{opacity:1}}
+@keyframes td3{0%{opacity:0}60%{opacity:1}100%{opacity:1}}
+</style>
+</head>
+<body>
+<svg class="svg-defs" aria-hidden="true" focusable="false"><defs><g id="athlete" fill="#000" stroke="none">
+<path d="M51.5 36 C50 46 51.5 54 53.5 60 C51.6 65 52.4 72 54.4 78 L55.4 83 L57.4 87.5 L58.7 82.5 L58.8 78 C59.7 72 59.9 65 58.5 60 C59.5 54 59.5 46 59.5 40 Z"></path>
+<path d="M 68.5 36 C 70 46 68.5 54 66.5 60 C 68.4 65 67.6 72 65.6 78 L 64.6 83 L 62.6 87.5 L 61.3 82.5 L 61.2 78 C 60.3 72 60.1 65 61.5 60 C 60.5 54 60.5 46 60.5 40 Z"></path>
+<path d="M56.6 -6 L63.4 -6 L64.3 -2 C67.5 -1 70.5 0 73 1.5 L72 12 C70.5 18 68 24 67 28 C67.5 32 68.5 35 68 39 L52 39 C51.5 35 52.5 32 53 28 C52 24 49.5 18 48 12 L47 1.5 C49.5 0 52.5 -1 55.7 -2 Z"></path>
+<ellipse cx="47.2" cy="4.5" rx="4.2" ry="4.9"></ellipse>
+<ellipse cx="72.8" cy="4.5" rx="4.2" ry="4.9"></ellipse>
+<ellipse cx="60" cy="-12" rx="5.8" ry="7.2"></ellipse>
+<g stroke="#fff" stroke-width="0.8" fill="none">
+<path d="M50.5 8 Q54.5 13 59.5 11 M69.5 8 Q65.5 13 60.5 11"></path>
+<path d="M56 15 Q55 21 57 27 M64 15 Q65 21 63 27"></path>
+<path d="M60 23.5 L60 25"></path>
+<path d="M54 28 Q55.5 33 58.5 36.5 M66 28 Q64.5 33 61.5 36.5"></path>
+<path d="M54 43 Q53 50 55 56 M66 43 Q67 50 65 56"></path>
+<path d="M54.4 64 Q53.6 69 55.2 75 M65.6 64 Q66.4 69 64.8 75"></path>
+</g>
+</g></defs></svg>
+<div class="page page-base">
+<div class="page-inner page-inner-base">
+
+<header class="site-header">
+<h1 class="hdr-logo logo-h1"><img class="logo-img" src="logo-aalto.png" alt="Aalto Calisthenics"></h1>
+<div class="hdr-motto motto">
+<p class="motto-la" lang="la"><span class="rule" aria-hidden="true"></span>DISCE · EXERCE · EXCELLE<span class="rule" aria-hidden="true"></span></p>
+<p class="motto-en" lang="en">Learn · Train · Excel</p>
+</div>
+<nav class="hdr-nav nav" aria-label="Main menu">
+
+
+<a class="hdr-join join-btn" href="https://docs.google.com/forms/d/e/1FAIpQLSfZa0ePRcI74dzw7_an0wX0QAKfoaOe_HKKSPf5pS0uRpXw3A/viewform" target="_blank" rel="noopener">JOIN</a>
+<div class="hdr-social social">
+<a class="icon-btn" href="https://www.instagram.com/aalto_calisthenics/" target="_blank" rel="noopener" aria-label="Instagram"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" r="0.5" fill="currentColor"></circle></svg></a>
+<a class="icon-btn" href="https://t.me/aalto_calisthenics" target="_blank" rel="noopener" aria-label="Telegram"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M21.5 3.5 2.5 11l7 2.5L18 7l-6.5 8v5.5l3.5-4 4.5 3.5z"></path></svg></a>
+</div>
+<div class="hdr-lang lang" role="group" aria-label="Language">
+<a class="lang-link" href="index.html" lang="fi" hreflang="fi" title="Suomi">FI</a>
+<span class="lang-current-sep" aria-current="page" lang="en" title="English">EN</span>
+<a class="lang-link-sep" href="sv.html" lang="sv" hreflang="sv" title="Svenska">SV</a>
+</div>
+</nav>
+</header>
+
+<section class="hero">
+<div class="car hero-photo">
+<img class="hero-img" src="ryhmakuva.jpg" alt="Group photo at Otaniemi Sports Park">
+</div>
+<div class="logo-box logo-box-base" aria-hidden="true">
+<div class="ld-view" aria-hidden="true">
+<div class="ld-strip">
+<div class="ld-frame">
+<svg class="svg-fit" width="248" height="151" viewBox="-28.5 -51 313.8 190.5" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+<g>
+<use href="#athlete" transform="translate(0 48)"></use>
+<path d="M50.8 49.9 Q49.3 41.5 44.6 34.1 L39.9 35.6 Q40.4 44.4 44.2 52.1 Z M38.1 20.3 Q37.3 28 39.7 35.2 L44.8 34.4 Q45 26.8 41.9 19.7 Z M75.8 52.1 Q79.6 44.4 80.1 35.6 L75.4 34.1 Q70.7 41.5 69.2 49.9 Z M78.1 19.7 Q75 26.8 75.2 34.4 L80.3 35.2 Q82.7 28 81.9 20.3 Z" fill="#000" stroke="none"></path>
+<circle cx="42.3" cy="34.8" r="2.3" fill="#000" stroke="none"></circle>
+<circle cx="77.7" cy="34.8" r="2.3" fill="#000" stroke="none"></circle>
+</g>
+<g>
+<use href="#athlete" transform="translate(187.2 23.7) rotate(55) rotate(-90) translate(-60 -3)"></use>
+<path d="M199.2 13.5 Q192.6 8.1 184.1 5.6 L181.6 9.9 Q187.7 16.1 195.6 19.5 Z M169 1.6 Q174.4 7.2 181.5 10 L184.2 5.5 Q178.4 0.5 171 -1.6 Z M174 28.9 Q168.4 35.5 165.7 43.8 L169.9 46.5 Q176.3 40.5 179.9 32.7 Z M171.9 59.7 Q172.8 52 170.4 44.8 L165.2 45.5 Q165.1 53.1 168.1 60.3 Z" fill="#000" stroke="none"></path>
+<circle cx="182.9" cy="7.7" r="2.3" fill="#000" stroke="none"></circle>
+<circle cx="167.8" cy="45.2" r="2.3" fill="#000" stroke="none"></circle>
+</g>
+</svg>
+<p class="ld-word"><span class="ghost">LOADING</span><span class="dots"></span></p>
+<div class="ld-bar-fill"><div class="cell-off"></div><div class="cell-off"></div><div class="cell-off"></div><div class="cell-off"></div></div>
+<span class="ld-pct">0%</span>
+</div>
+<div class="ld-frame">
+<svg class="svg-fit" width="248" height="151" viewBox="-28.5 -51 313.8 190.5" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+<g>
+<use href="#athlete" transform="translate(0 41)"></use>
+<path d="M49.6 41.2 Q43.6 35.1 35.5 31.7 L32.4 35.7 Q37.9 42.6 45.4 46.8 Z M38.3 19.2 Q33.4 25.3 31.6 32.7 L36.3 34.8 Q40.5 28.4 41.7 20.8 Z M74.6 46.8 Q82.1 42.6 87.6 35.7 L84.5 31.7 Q76.4 35.1 70.4 41.2 Z M78.3 20.8 Q79.5 28.4 83.7 34.8 L88.4 32.7 Q86.6 25.3 81.7 19.2 Z" fill="#000" stroke="none"></path>
+<circle cx="34" cy="33.7" r="2.3" fill="#000" stroke="none"></circle>
+<circle cx="86" cy="33.7" r="2.3" fill="#000" stroke="none"></circle>
+</g>
+<g>
+<use href="#athlete" transform="translate(190.9 23.3) rotate(40) rotate(-90) translate(-60 -3)"></use>
+<path d="M200.4 10.6 Q193.2 5.8 184.6 4.2 L182.5 8.7 Q189.2 14.3 197.4 16.9 Z M169.2 1.7 Q175.1 6.7 182.4 8.8 L184.7 4.1 Q178.4 -0.3 170.8 -1.7 Z M180.3 30.4 Q173.5 35.7 169.2 43.3 L172.7 46.8 Q180.3 42.2 185.3 35.3 Z M171.9 60.1 Q174.4 52.8 173.5 45.2 L168.4 44.9 Q166.6 52.3 168.1 59.9 Z" fill="#000" stroke="none"></path>
+<circle cx="183.6" cy="6.4" r="2.3" fill="#000" stroke="none"></circle>
+<circle cx="170.9" cy="45" r="2.3" fill="#000" stroke="none"></circle>
+</g>
+</svg>
+<p class="ld-word"><span class="ghost">LOADING</span><span class="dots">.</span></p>
+<div class="ld-bar-fill"><div class="cell-on"></div><div class="cell-off"></div><div class="cell-off"></div><div class="cell-off"></div></div>
+<span class="ld-pct">25%</span>
+</div>
+<div class="ld-frame">
+<svg class="svg-fit" width="248" height="151" viewBox="-28.5 -51 313.8 190.5" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+<g>
+<use href="#athlete" transform="translate(0 34)"></use>
+<path d="M48.5 33.6 Q40.7 30.1 31.9 29.8 L30.5 34.5 Q38 39.1 46.5 40.4 Z M38.5 18.9 Q32.4 23.8 29.1 30.6 L33.3 33.7 Q38.8 28.4 41.5 21.1 Z M73.5 40.4 Q82 39.1 89.5 34.5 L88.1 29.8 Q79.3 30.1 71.5 33.6 Z M78.5 21.1 Q81.2 28.4 86.7 33.7 L90.9 30.6 Q87.6 23.8 81.5 18.9 Z" fill="#000" stroke="none"></path>
+<circle cx="31.2" cy="32.2" r="2.3" fill="#000" stroke="none"></circle>
+<circle cx="88.8" cy="32.2" r="2.3" fill="#000" stroke="none"></circle>
+</g>
+<g>
+<use href="#athlete" transform="translate(193.7 25) rotate(25) rotate(-90) translate(-60 -3)"></use>
+<path d="M200.4 10.5 Q193.3 5.8 184.6 4.1 L182.5 8.6 Q189.3 14.3 197.5 16.8 Z M169.2 1.7 Q175.1 6.7 182.5 8.7 L184.7 4 Q178.4 -0.3 170.8 -1.7 Z M185.1 35.2 Q181.2 42.8 180.6 51.6 L185.3 53.2 Q190.1 45.8 191.7 37.4 Z M171 61.6 Q178.4 59.5 184.2 54.6 L181.6 50.1 Q174.5 52.8 169 58.4 Z" fill="#000" stroke="none"></path>
+<circle cx="183.6" cy="6.4" r="2.3" fill="#000" stroke="none"></circle>
+<circle cx="182.9" cy="52.4" r="2.3" fill="#000" stroke="none"></circle>
+</g>
+</svg>
+<p class="ld-word"><span class="ghost">LOADING</span><span class="dots">..</span></p>
+<div class="ld-bar-fill"><div class="cell-on"></div><div class="cell-on"></div><div class="cell-off"></div><div class="cell-off"></div></div>
+<span class="ld-pct">50%</span>
+</div>
+<div class="ld-frame">
+<svg class="svg-fit" width="248" height="151" viewBox="-28.5 -51 313.8 190.5" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+<g>
+<use href="#athlete" transform="translate(0 29)"></use>
+<path d="M47.6 28.5 Q39.1 27.1 30.6 29.1 L30.4 34.1 Q38.9 36.5 47.4 35.5 Z M38.5 18.8 Q32.2 23.3 28.5 30 L32.5 33.3 Q38.3 28.3 41.5 21.2 Z M72.6 35.5 Q81.1 36.5 89.6 34.1 L89.4 29.1 Q80.9 27.1 72.4 28.5 Z M78.5 21.2 Q81.7 28.3 87.5 33.3 L91.5 30 Q87.8 23.3 81.5 18.8 Z" fill="#000" stroke="none"></path>
+<circle cx="30.5" cy="31.6" r="2.3" fill="#000" stroke="none"></circle>
+<circle cx="89.5" cy="31.6" r="2.3" fill="#000" stroke="none"></circle>
+</g>
+<g>
+<use href="#athlete" transform="translate(195.2 28.1) rotate(12) rotate(-90) translate(-60 -3)"></use>
+<path d="M199.5 12.8 Q192.7 7.6 184.3 5.3 L181.8 9.6 Q188.1 15.7 196.1 18.9 Z M169.1 1.7 Q174.6 7.1 181.7 9.7 L184.3 5.2 Q178.4 0.3 170.9 -1.7 Z M189.6 38.6 Q184.3 45.4 182 53.8 L186.3 56.3 Q192.5 50 195.6 42 Z M170.6 61.8 Q178.4 61.2 185 57.5 L183.3 52.6 Q175.8 53.9 169.4 58.2 Z" fill="#000" stroke="none"></path>
+<circle cx="183" cy="7.4" r="2.3" fill="#000" stroke="none"></circle>
+<circle cx="184.2" cy="55.1" r="2.3" fill="#000" stroke="none"></circle>
+</g>
+</svg>
+<p class="ld-word"><span class="ghost">LOADING</span><span class="dots">...</span></p>
+<div class="ld-bar-fill"><div class="cell-on"></div><div class="cell-on"></div><div class="cell-on"></div><div class="cell-off"></div></div>
+<span class="ld-pct">75%</span>
+</div>
+<div class="ld-frame">
+<svg class="svg-fit" width="248" height="151" viewBox="-28.5 -51 313.8 190.5" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+<g>
+<use href="#athlete" transform="translate(0 25)"></use>
+<path d="M46.7 24.6 Q38.1 25.4 30.4 29.5 L31.6 34.4 Q40.3 34.6 48.3 31.4 Z M38.5 18.9 Q32.4 23.6 28.9 30.4 L33 33.5 Q38.6 28.3 41.5 21.1 Z M71.7 31.4 Q79.7 34.6 88.4 34.4 L89.6 29.5 Q81.9 25.4 73.3 24.6 Z M78.5 21.1 Q81.4 28.3 87 33.5 L91.1 30.4 Q87.6 23.6 81.5 18.9 Z" fill="#000" stroke="none"></path>
+<circle cx="31" cy="32" r="2.3" fill="#000" stroke="none"></circle>
+<circle cx="89" cy="32" r="2.3" fill="#000" stroke="none"></circle>
+</g>
+<g>
+<use href="#athlete" transform="translate(196.8 30) rotate(0) rotate(-90) translate(-60 -3)"></use>
+<path d="M198.7 14.6 Q192.2 8.9 183.9 6.1 L181.2 10.3 Q187.1 16.8 194.9 20.5 Z M169 1.6 Q174.1 7.4 181.1 10.4 L184 6 Q178.4 0.8 171 -1.6 Z M194.8 39.7 Q187.1 43.6 181.4 50.3 L184.3 54.4 Q192.5 51.3 198.8 45.4 Z M171 61.6 Q178.4 59.5 184.2 54.6 L181.6 50.1 Q174.4 52.8 169 58.4 Z" fill="#000" stroke="none"></path>
+<circle cx="182.6" cy="8.2" r="2.3" fill="#000" stroke="none"></circle>
+<circle cx="182.9" cy="52.3" r="2.3" fill="#000" stroke="none"></circle>
+</g>
+</svg>
+<p class="ld-word"><span class="ghost">LOADING</span><span class="dots">...</span></p>
+<div class="ld-bar-fill"><div class="cell-on"></div><div class="cell-on"></div><div class="cell-on"></div><div class="cell-on"></div></div>
+<span class="ld-pct">100%</span>
+</div>
+</div>
+<div class="ld-static">
+<svg class="svg-fit" width="248" height="151" viewBox="-28.5 -51 313.8 190.5" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+<path d="M-21.1 118 L60 -40 L141.1 118" stroke-width="6" stroke-linecap="square" stroke-linejoin="miter" stroke-miterlimit="10"></path>
+<path d="M29.6 20 L90.4 20" stroke-width="5" stroke-linecap="butt"></path>
+<g fill="#000" stroke="none">
+<circle cx="40" cy="20" r="2.9"></circle>
+<circle cx="80" cy="20" r="2.9"></circle>
+</g>
+<path d="M170 -40 L170 92" stroke-width="6" stroke-linecap="square"></path>
+<circle cx="170" cy="113" r="6" fill="#000" stroke="none"></circle>
+<g fill="#000" stroke="none">
+<circle cx="170" cy="0" r="2.3"></circle>
+<circle cx="170" cy="60" r="2.3"></circle>
+</g>
+</svg>
+<p class="ld-word">LOADING<span class="dots"></span></p>
+<div class="ld-bar"><div class="cell-off"></div><div class="cell-off"></div><div class="cell-off"></div><div class="cell-off"></div></div>
+<span class="ld-pct-ghost">0%</span>
+</div>
+</div>
+</div>
+</section>
+
+<div class="grid">
+<section class="col">
+<div class="card">
+<h2 class="box-title">SCHEDULE</h2>
+<div class="sched-row row"><div class="row-label">COMING SOON<span class="dots"><span class="td td1">.</span><span class="td td2">.</span><span class="td td3">.</span></span></div><div>OPEN TRAINING</div></div>
+<div class="sched-row row"><div class="row-label">COMING SOON<span class="dots"><span class="td td1">.</span><span class="td td2">.</span><span class="td td3">.</span></span></div><div>MOVES &amp; TECHNIQUE</div></div>
+<div class="sched-row row"><div class="row-label">COMING SOON<span class="dots"><span class="td td1">.</span><span class="td td2">.</span><span class="td td3">.</span></span></div><div>OUTDOOR TRAINING</div></div>
+</div>
+<div class="card">
+<h2 class="box-title">INFO</h2>
+<div class="info-row row-info"><div class="row-label">LOCATION</div><div class="row-value">OTANIEMI SPORTS PARK</div></div>
+<div class="info-row row-info"><div class="row-label">CLOTHING</div><div class="row-value">ANYTHING GOES</div></div>
+<div class="info-row row-info"><div class="row-label">EQUIPMENT</div><div class="row-value">BRING YOUR OWN IF YOU HAVE ANY</div></div>
+<div class="info-row row-last"><div class="row-label">MAP</div><div class="map-icons"><a class="icon-btn" href="https://www.google.com/maps/search/?api=1&amp;query=60.18547861096524,24.833724867153066" target="_blank" rel="noopener" aria-label="Open in Google Maps" title="Google Maps"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"></path><circle cx="12" cy="9.5" r="2.5"></circle></svg></a>
+<a class="icon-btn" href="https://maps.apple.com/?ll=60.18547861096524,24.833724867153066&amp;q=Aalto%20Calisthenics" target="_blank" rel="noopener" aria-label="Open in Apple Maps" title="Apple Maps"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M3 6l6-2 6 2 6-2v14l-6 2-6-2-6 2z"></path><path d="M9 4v14M15 6v14"></path></svg></a></div></div>
+</div>
+</section>
+
+<section class="faq-box faq-box-base">
+<h2 class="box-title">FAQ</h2>
+<details class="faq-item">
+<summary class="faq-q">WHAT IS CALISTHENICS?<span class="faq-plus faq-icon" aria-hidden="true">+</span></summary>
+<p class="faq-answer">Calisthenics is strength training with your own body weight: pull-ups, dips, push-ups, handstands and other moves.</p>
+</details>
+<details class="faq-item">
+<summary class="faq-q">WHO ARE WE?<span class="faq-plus faq-icon" aria-hidden="true">+</span></summary>
+<p class="faq-answer">We are students and alumni.</p>
+</details>
+<details class="faq-item">
+<summary class="faq-q">HOW DO I JOIN?<span class="faq-plus faq-icon" aria-hidden="true">+</span></summary>
+<p class="faq-answer">Fill in the <a class="faq-link" href="https://docs.google.com/forms/d/e/1FAIpQLSfZa0ePRcI74dzw7_an0wX0QAKfoaOe_HKKSPf5pS0uRpXw3A/viewform" target="_blank" rel="noopener">Join form</a>.</p>
+</details>
+<details class="faq-item">
+<summary class="faq-q">WHERE DO WE TRAIN?<span class="faq-plus faq-icon" aria-hidden="true">+</span></summary>
+<p class="faq-answer">At Otaniemi Sports Park.</p>
+</details>
+<details class="faq-item">
+<summary class="faq-q">CAN ANYONE JOIN?<span class="faq-plus faq-icon" aria-hidden="true">+</span></summary>
+<p class="faq-answer">Yes!</p>
+</details>
+<details class="faq-item">
+<summary class="faq-q">I'M A BEGINNER<span class="faq-plus faq-icon" aria-hidden="true">+</span></summary>
+<p class="faq-answer">Come and train with us!</p>
+</details>
+<details class="faq-item">
+<summary class="faq-q">I'M A PROFESSIONAL<span class="faq-plus faq-icon" aria-hidden="true">+</span></summary>
+<p class="faq-answer">Come and train with us!</p>
+</details>
+</section>
+</div>
+<p class="welcome welcome-base"><span class="rule" aria-hidden="true"></span>EVERYONE IS WELCOME!<span class="rule" aria-hidden="true"></span></p>
+
+</div>
+</div>
+</body>
+</html>
