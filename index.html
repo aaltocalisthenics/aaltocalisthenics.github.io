@@ -19,13 +19,15 @@ body{margin:0;background:#f4f4f4}
 .page-inner-base{max-width: 1200px;margin: 0 auto;display: flex;flex-direction: column;gap: 2rem}
 .site-header{display: flex;flex-wrap: wrap;justify-content: space-between;align-items: center;gap: 1rem;border-bottom: 2px solid #000;padding-bottom: 1rem}
 .logo-h1{margin: 0;line-height: 0}
-.logo-img{height: 80px;width: auto;display: block}
-.motto{flex: 1 1 auto;display: flex;flex-direction: column;align-items: center;gap: 0.375rem;text-align: center}
-.motto-la{margin: 0;display: flex;align-items: center;gap: 0.75rem;font-family: Cinzel, 'Times New Roman', serif;font-weight: 500;font-size: 1.25rem;letter-spacing: 0.2em;text-transform: none;white-space: nowrap;cursor: default}
+.logo-img{height: 120px;width: auto;display: block;margin: 2px;border-radius: 50%;box-shadow: 0 0 0 2px #000}
+.motto{flex: 1 1 auto;display: flex;flex-direction: column;align-items: center;gap: 0.375rem;text-align: center;padding-top: 1rem}
+.motto-la{margin: 0;display: flex;align-items: center;gap: 0.75rem;font-family: Cinzel, 'Times New Roman', serif;font-weight: 500;font-size: 1.5rem;letter-spacing: 0.14em;text-transform: none;white-space: nowrap;cursor: default}
+.motto-la .rule{width: 36px}
 .rule{width: 32px;height: 1px;background: #000;flex: none}
-.motto-en{margin: 0;font-family: 'Cormorant Garamond', Georgia, serif;font-style: italic;font-weight: 500;font-size: 1rem;letter-spacing: 0.06em;text-transform: none;color: #444;white-space: nowrap;cursor: default}
+.motto-en{margin: 0;font-family: 'Cormorant Garamond', Georgia, serif;font-style: italic;font-weight: 500;font-size: 1.25rem;letter-spacing: 0.06em;text-transform: none;color: #444;white-space: nowrap;cursor: default}
 .nav{display: flex;flex-wrap: wrap;align-items: center;gap: 1.5rem}
-.join-btn{display: flex;align-items: center;height: 44px;padding: 0 1rem;border: 2px solid #000;box-sizing: border-box;background: #fff;text-decoration: none;font-weight: 900;font-size: 1.125rem;letter-spacing: 0.04em}
+.join-btn{display: flex;align-items: center;height: 44px;padding: 0 1rem;border: 2px solid #000;box-sizing: border-box;background: #000;color: #fff;text-decoration: none;font-weight: 900;font-size: 1.125rem;letter-spacing: 0.04em;justify-content: center;text-align: center}
+.join-btn:hover,.join-btn:focus-visible{color: #fff;background: #333}
 .social{display: flex;gap: 0.5rem;padding-left: 1.5rem;border-left: 2px solid #000}
 .icon-btn{width: 44px;height: 44px;display: flex;align-items: center;justify-content: center;border: 2px solid #000;box-sizing: border-box}
 .lang{display: flex;border: 2px solid #000}
@@ -75,23 +77,40 @@ summary{list-style:none;cursor:pointer}summary::-webkit-details-marker{display:n
 header{gap:.75rem !important}
 .hdr-nav{display:contents !important}
 .hdr-logo{order:1}
-.hdr-logo img{height:64px !important}
+.hdr-logo img{height:88px !important}
 .hdr-social{order:2;margin-left:auto;padding-left:0 !important;border-left:0 !important}
 .hdr-lang{order:3}
-.hdr-motto{order:4;flex-basis:100% !important}
-.hdr-motto p[lang=la]{font-size:.875rem !important;letter-spacing:.14em !important;gap:.5rem !important}
-.hdr-motto p[lang=la] span{width:18px !important}
-.hdr-join{order:5;margin:0 auto}
+.hdr-motto{order:5;flex:1 1 auto !important;padding-top:0 !important}
+.hdr-motto p[lang=la]{font-size:clamp(.625rem,3.2vw,.75rem) !important;letter-spacing:.08em !important;gap:.375rem !important}
+.hdr-motto p[lang=en]{font-size:clamp(.6875rem,3.4vw,.8125rem) !important}
+.hdr-motto p[lang=la] span{width:12px !important}
+.hdr-join{order:6;margin:0 0 0 auto;font-size:.875rem !important;padding:0 .875rem !important}
+.site-header::after{content:"";order:4;flex-basis:100%;height:0;margin-top:-.75rem}
 .welcome{font-size:.75rem !important;letter-spacing:.06em !important;white-space:nowrap;gap:.5rem !important}
 .welcome span{width:12px !important}
 .car{flex-basis:100% !important;min-height:300px !important}
 .logo-box{border-left:0 !important;border-top:2px solid #000;min-height:0 !important;padding:1.5rem !important}
-.page h2{font-size:2rem !important}
-.page section > div, .faq-box{padding:1.5rem !important}
+.page h2{font-size:clamp(1.5rem,8.5vw,2rem) !important}
+.page section > div, .faq-box{padding:clamp(1rem,5vw,1.5rem) !important}
 .sched-row{flex-direction:column !important;gap:.25rem !important;padding:.75rem 0 !important}
 .sched-row > div:last-child{font-size:.875rem}
 .info-row{flex-direction:column !important;align-items:flex-start !important;gap:.25rem !important;padding:.75rem 0 !important}
 .info-row > div:last-child{text-align:left !important;font-size:.875rem}
+}
+/* Pienet puhelimet / small phones (240–380 px) */
+@media (max-width: 380px){
+.hdr-logo img{height:64px !important}
+.hdr-motto p[lang=la]{letter-spacing:.05em !important}
+.hdr-join{padding:0 .625rem !important}
+.welcome{white-space:normal !important;font-size:clamp(.625rem,3.3vw,.75rem) !important}
+}
+@media (max-width: 340px){
+.hdr-logo{flex-basis:100%}
+.hdr-social{margin-left:0}
+.hdr-lang{margin-left:auto}
+.hdr-motto{flex-basis:100% !important}
+.hdr-join{margin:0 auto}
+.page{padding:.75rem !important}
 }
 .ld-strip{animation:strip 2.5s steps(5) infinite}
 @keyframes strip{to{transform:translateY(-1350px)}}
@@ -125,7 +144,7 @@ header{gap:.75rem !important}
 <div class="page-inner page-inner-base">
 
 <header class="site-header">
-<h1 class="hdr-logo logo-h1"><img class="logo-img" src="logo-aalto.png" alt="Aalto Calisthenics"></h1>
+<h1 class="hdr-logo logo-h1"><img class="logo-img" src="aalto-calisthenics-logo.svg" alt="Aalto Calisthenics"></h1>
 <div class="hdr-motto motto">
 <p class="motto-la" lang="la"><span class="rule" aria-hidden="true"></span>DISCE · EXERCE · EXCELLE<span class="rule" aria-hidden="true"></span></p>
 <p class="motto-en" lang="en">Learn · Train · Excel</p>
@@ -277,14 +296,14 @@ header{gap:.75rem !important}
 <div class="card">
 <h2 class="box-title">AIKATAULU</h2>
 <div class="sched-row row"><div class="row-label">TULOSSA<span class="dots"><span class="td td1">.</span><span class="td td2">.</span><span class="td td3">.</span></span></div><div>AVOIN TREENI</div></div>
-<div class="sched-row row"><div class="row-label">TULOSSA<span class="dots"><span class="td td1">.</span><span class="td td2">.</span><span class="td td3">.</span></span></div><div>LIIKKEET &amp; TEKNIIKKA</div></div>
+<div class="sched-row row"><div class="row-label">TULOSSA<span class="dots"><span class="td td1">.</span><span class="td td2">.</span><span class="td td3">.</span></span></div><div>LIIKKEET JA TEKNIIKKA</div></div>
 <div class="sched-row row"><div class="row-label">TULOSSA<span class="dots"><span class="td td1">.</span><span class="td td2">.</span><span class="td td3">.</span></span></div><div>ULKOTREENI</div></div>
 </div>
 <div class="card">
 <h2 class="box-title">INFO</h2>
 <div class="info-row row-info"><div class="row-label">PAIKKA</div><div class="row-value">OTANIEMEN URHEILUPUISTO</div></div>
 <div class="info-row row-info"><div class="row-label">VAATETUS</div><div class="row-value">VAPAA</div></div>
-<div class="info-row row-info"><div class="row-label">VARUSTEET</div><div class="row-value">OTA MUKAAN, JOS ON</div></div>
+<div class="info-row row-info"><div class="row-label">VARUSTEET</div><div class="row-value">OTA OMAT MUKAAN, JOS SINULLA ON</div></div>
 <div class="info-row row-last"><div class="row-label">KARTTA</div><div class="map-icons"><a class="icon-btn" href="https://www.google.com/maps/search/?api=1&amp;query=60.18547861096524,24.833724867153066" target="_blank" rel="noopener" aria-label="Avaa Google Mapsissa" title="Google Maps"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"></path><circle cx="12" cy="9.5" r="2.5"></circle></svg></a>
 <a class="icon-btn" href="https://maps.apple.com/?ll=60.18547861096524,24.833724867153066&amp;q=Aalto%20Calisthenics" target="_blank" rel="noopener" aria-label="Avaa Apple Mapsissa" title="Apple Maps"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M3 6l6-2 6 2 6-2v14l-6 2-6-2-6 2z"></path><path d="M9 4v14M15 6v14"></path></svg></a></div></div>
 </div>
@@ -294,31 +313,31 @@ header{gap:.75rem !important}
 <h2 class="box-title">UKK</h2>
 <details class="faq-item">
 <summary class="faq-q">MITÄ ON CALISTHENICS?<span class="faq-plus faq-icon" aria-hidden="true">+</span></summary>
-<p class="faq-answer">Calisthenics on oman kehon painolla tehtävää voimaharjoittelua: leuanvetoja, dippejä, punnerruksia, käsilläseisontoja ja muita liikkeitä.</p>
+<p class="faq-answer">Calisthenics on voimaharjoittelua oman kehon painolla. Tyypillisiä liikkeitä ovat leuanvedot, dipit, punnerrukset, kyykyt ja käsilläseisonnat. Kehittyessäsi voit tavoitella taitoliikkeitä, kuten muscle-upia, kulmanojaa (L-sit), etuvaakaa (front lever) ja nojavaakaa (planche). Tarvitset vain tangon, vähän tilaa ja motivaatiota kehittyä.</p>
 </details>
 <details class="faq-item">
 <summary class="faq-q">KEITÄ ME OLEMME?<span class="faq-plus faq-icon" aria-hidden="true">+</span></summary>
-<p class="faq-answer">Olemme opiskelijoita ja alumneja.</p>
+<p class="faq-answer">Olemme Aallon opiskelijoiden, henkilökunnan ja alumnien yhteisö, johon kuuluu myös ystäviä muista yliopistoista ja työelämästä. Rakastamme yhdessä treenaamista. Olemme voittoa tavoittelematon, jäsentensä ylläpitämä yhdistys. Treenaamme ilon ja kehittymisen vuoksi, emme kilpaillaksemme.</p>
 </details>
 <details class="faq-item">
-<summary class="faq-q">MITEN LIITYN MUKAAN?<span class="faq-plus faq-icon" aria-hidden="true">+</span></summary>
-<p class="faq-answer">Liity täyttämällä <a class="faq-link" href="https://docs.google.com/forms/d/e/1FAIpQLSfZa0ePRcI74dzw7_an0wX0QAKfoaOe_HKKSPf5pS0uRpXw3A/viewform" target="_blank" rel="noopener">Jäseneksi-lomake</a>.</p>
+<summary class="faq-q">MITEN LIITYN JÄSENEKSI?<span class="faq-plus faq-icon" aria-hidden="true">+</span></summary>
+<p class="faq-answer">Täytä <a class="faq-link" href="https://docs.google.com/forms/d/e/1FAIpQLSfZa0ePRcI74dzw7_an0wX0QAKfoaOe_HKKSPf5pS0uRpXw3A/viewform" target="_blank" rel="noopener">jäsenlomake</a> (Jäseneksi-painike sivun yläreunassa) ja liity sitten <a class="faq-link" href="https://t.me/aalto_calisthenics" target="_blank" rel="noopener">Telegram-ryhmäämme</a>, josta näet treeniaikataulun. Jäsenyys on maksuton ensimmäisenä toimintavuotenamme. Voit myös tulla kokeilemaan treenejä ennen kuin liityt.</p>
 </details>
 <details class="faq-item">
 <summary class="faq-q">MISSÄ TREENAAMME?<span class="faq-plus faq-icon" aria-hidden="true">+</span></summary>
-<p class="faq-answer">Otaniemen urheilupuistossa.</p>
+<p class="faq-answer">Pääasiassa Otaniemen urheilupuistossa Espoossa. Reittiohjeet löydät Info-kohdan karttapainikkeista. Treenaamme välillä myös sisätiloissa, varsinkin talvella. Treenien ajat ja paikat ilmoitetaan <a class="faq-link" href="https://t.me/aalto_calisthenics" target="_blank" rel="noopener">Telegram-ryhmässämme</a>.</p>
 </details>
 <details class="faq-item">
 <summary class="faq-q">VOIKO KUKA TAHANSA LIITTYÄ?<span class="faq-plus faq-icon" aria-hidden="true">+</span></summary>
-<p class="faq-answer">Kyllä!</p>
+<p class="faq-answer">Kyllä! Aalto-yliopiston ylioppilaskunnan (AYY) jäsenet liittyvät varsinaisiksi jäseniksi, ja kaikki muut ovat tervetulleita ulkojäseniksi. Sinun ei tarvitse opiskella tai työskennellä Aallossa, ja mukaan pääsee millä tasolla tahansa: ensimmäisestä leuanvedosta aina edistyneisiin taitoliikkeisiin.</p>
 </details>
 <details class="faq-item">
 <summary class="faq-q">OLEN ALOITTELIJA<span class="faq-plus faq-icon" aria-hidden="true">+</span></summary>
-<p class="faq-answer">Tule treenaamaan!</p>
+<p class="faq-answer">Mahtavaa, jokainen aloittaa jostain! Treeneissä yhdistyvät suunnitelmallinen ja vapaa harjoittelu, ja jokaisesta liikkeestä on helpompi muunnelma, joten voit treenata omalla tasollasi. Kokeneemmat jäsenet auttavat mielellään tekniikassa. Tule vain mukaan, ota vesipullo ja vaatteet, joissa on hyvä liikkua, ja aloita.</p>
 </details>
 <details class="faq-item">
-<summary class="faq-q">OLEN AMMATTILAINEN<span class="faq-plus faq-icon" aria-hidden="true">+</span></summary>
-<p class="faq-answer">Tule treenaamaan!</p>
+<summary class="faq-q">OLEN KOKENUT<span class="faq-plus faq-icon" aria-hidden="true">+</span></summary>
+<p class="faq-answer">Hienoa, tule treenaamaan kanssamme! Meiltä löydät treenikavereita, jotka haastavat sinua, varmistavat sinua vaativissa liikkeissä ja jakavat osaamistaan kanssasi. Jos pidät valmentamisesta, otamme mielellämme vastaan apuasi työpajojen vetämisessä tai tekniikkavinkkien antamisessa uusille jäsenille.</p>
 </details>
 </section>
 </div>

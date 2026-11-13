@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Aalto Calisthenics</title>
-<meta name="description" content="Aalto Calisthenics – Disce · Exerce · Excelle. Kroppsviktsträning: chins, dips och handstående i Otnäs idrottspark. Kom och träna med oss!">
+<meta name="description" content="Aalto Calisthenics – Disce · Exerce · Excelle. Kroppsviktsträning: räckhäv, dips och handstående i Otnäs idrottspark. Kom och träna med oss!">
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
 <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
 <link rel="icon" type="image/png" sizes="192x192" href="favicon-192.png">
@@ -19,13 +19,15 @@ body{margin:0;background:#f4f4f4}
 .page-inner-base{max-width: 1200px;margin: 0 auto;display: flex;flex-direction: column;gap: 2rem}
 .site-header{display: flex;flex-wrap: wrap;justify-content: space-between;align-items: center;gap: 1rem;border-bottom: 2px solid #000;padding-bottom: 1rem}
 .logo-h1{margin: 0;line-height: 0}
-.logo-img{height: 80px;width: auto;display: block}
-.motto{flex: 1 1 auto;display: flex;flex-direction: column;align-items: center;gap: 0.375rem;text-align: center}
-.motto-la{margin: 0;display: flex;align-items: center;gap: 0.75rem;font-family: Cinzel, 'Times New Roman', serif;font-weight: 500;font-size: 1.25rem;letter-spacing: 0.2em;text-transform: none;white-space: nowrap;cursor: default}
+.logo-img{height: 120px;width: auto;display: block;margin: 2px;border-radius: 50%;box-shadow: 0 0 0 2px #000}
+.motto{flex: 1 1 auto;display: flex;flex-direction: column;align-items: center;gap: 0.375rem;text-align: center;padding-top: 1rem}
+.motto-la{margin: 0;display: flex;align-items: center;gap: 0.75rem;font-family: Cinzel, 'Times New Roman', serif;font-weight: 500;font-size: 1.5rem;letter-spacing: 0.14em;text-transform: none;white-space: nowrap;cursor: default}
+.motto-la .rule{width: 36px}
 .rule{width: 32px;height: 1px;background: #000;flex: none}
-.motto-en{margin: 0;font-family: 'Cormorant Garamond', Georgia, serif;font-style: italic;font-weight: 500;font-size: 1rem;letter-spacing: 0.06em;text-transform: none;color: #444;white-space: nowrap;cursor: default}
+.motto-en{margin: 0;font-family: 'Cormorant Garamond', Georgia, serif;font-style: italic;font-weight: 500;font-size: 1.25rem;letter-spacing: 0.06em;text-transform: none;color: #444;white-space: nowrap;cursor: default}
 .nav{display: flex;flex-wrap: wrap;align-items: center;gap: 1.5rem}
-.join-btn{display: flex;align-items: center;height: 44px;padding: 0 1rem;border: 2px solid #000;box-sizing: border-box;background: #fff;text-decoration: none;font-weight: 900;font-size: 1.125rem;letter-spacing: 0.04em}
+.join-btn{display: flex;align-items: center;height: 44px;padding: 0 1rem;border: 2px solid #000;box-sizing: border-box;background: #000;color: #fff;text-decoration: none;font-weight: 900;font-size: 1.125rem;letter-spacing: 0.04em;justify-content: center;text-align: center}
+.join-btn:hover,.join-btn:focus-visible{color: #fff;background: #333}
 .social{display: flex;gap: 0.5rem;padding-left: 1.5rem;border-left: 2px solid #000}
 .icon-btn{width: 44px;height: 44px;display: flex;align-items: center;justify-content: center;border: 2px solid #000;box-sizing: border-box}
 .lang{display: flex;border: 2px solid #000}
@@ -76,23 +78,40 @@ summary{list-style:none;cursor:pointer}summary::-webkit-details-marker{display:n
 header{gap:.75rem !important}
 .hdr-nav{display:contents !important}
 .hdr-logo{order:1}
-.hdr-logo img{height:64px !important}
+.hdr-logo img{height:88px !important}
 .hdr-social{order:2;margin-left:auto;padding-left:0 !important;border-left:0 !important}
 .hdr-lang{order:3}
-.hdr-motto{order:4;flex-basis:100% !important}
-.hdr-motto p[lang=la]{font-size:.875rem !important;letter-spacing:.14em !important;gap:.5rem !important}
-.hdr-motto p[lang=la] span{width:18px !important}
-.hdr-join{order:5;margin:0 auto}
+.hdr-motto{order:5;flex:1 1 auto !important;padding-top:0 !important}
+.hdr-motto p[lang=la]{font-size:clamp(.625rem,3.2vw,.75rem) !important;letter-spacing:.08em !important;gap:.375rem !important}
+.hdr-motto p[lang=en]{font-size:clamp(.6875rem,3.4vw,.8125rem) !important}
+.hdr-motto p[lang=la] span{width:12px !important}
+.hdr-join{order:6;margin:0 0 0 auto;font-size:.875rem !important;padding:0 .875rem !important}
+.site-header::after{content:"";order:4;flex-basis:100%;height:0;margin-top:-.75rem}
 .welcome{font-size:.75rem !important;letter-spacing:.06em !important;white-space:nowrap;gap:.5rem !important}
 .welcome span{width:12px !important}
 .car{flex-basis:100% !important;min-height:300px !important}
 .logo-box{border-left:0 !important;border-top:2px solid #000;min-height:0 !important;padding:1.5rem !important}
-.page h2{font-size:2rem !important}
-.page section > div, .faq-box{padding:1.5rem !important}
+.page h2{font-size:clamp(1.5rem,8.5vw,2rem) !important}
+.page section > div, .faq-box{padding:clamp(1rem,5vw,1.5rem) !important}
 .sched-row{flex-direction:column !important;gap:.25rem !important;padding:.75rem 0 !important}
 .sched-row > div:last-child{font-size:.875rem}
 .info-row{flex-direction:column !important;align-items:flex-start !important;gap:.25rem !important;padding:.75rem 0 !important}
 .info-row > div:last-child{text-align:left !important;font-size:.875rem}
+}
+/* Pienet puhelimet / small phones (240–380 px) */
+@media (max-width: 380px){
+.hdr-logo img{height:64px !important}
+.hdr-motto p[lang=la]{letter-spacing:.05em !important}
+.hdr-join{padding:0 .625rem !important}
+.welcome{white-space:normal !important;font-size:clamp(.625rem,3.3vw,.75rem) !important}
+}
+@media (max-width: 340px){
+.hdr-logo{flex-basis:100%}
+.hdr-social{margin-left:0}
+.hdr-lang{margin-left:auto}
+.hdr-motto{flex-basis:100% !important}
+.hdr-join{margin:0 auto}
+.page{padding:.75rem !important}
 }
 .ld-strip{animation:strip 2.5s steps(5) infinite}
 @keyframes strip{to{transform:translateY(-1350px)}}
@@ -126,7 +145,7 @@ header{gap:.75rem !important}
 <div class="page-inner page-inner-base">
 
 <header class="site-header">
-<h1 class="hdr-logo logo-h1"><img class="logo-img" src="logo-aalto.png" alt="Aalto Calisthenics"></h1>
+<h1 class="hdr-logo logo-h1"><img class="logo-img" src="aalto-calisthenics-logo.svg" alt="Aalto Calisthenics"></h1>
 <div class="hdr-motto motto">
 <p class="motto-la" lang="la"><span class="rule" aria-hidden="true"></span>DISCE · EXERCE · EXCELLE<span class="rule" aria-hidden="true"></span></p>
 <p class="motto-en" lang="en">Learn · Train · Excel</p>
@@ -295,31 +314,31 @@ header{gap:.75rem !important}
 <h2 class="box-title">VANLIGA FRÅGOR</h2>
 <details class="faq-item">
 <summary class="faq-q">VAD ÄR CALISTHENICS?<span class="faq-plus faq-icon" aria-hidden="true">+</span></summary>
-<p class="faq-answer">Calisthenics är styrketräning med den egna kroppsvikten: chins, dips, armhävningar, handstående och andra övningar.</p>
+<p class="faq-answer">Calisthenics är styrketräning med den egna kroppsvikten. Tänk räckhäv, dips, armhävningar, knäböj och handstående. När du utvecklas kan du arbeta mot färdigheter som muscle-up, L-sit, framlans (front lever) och stödvåg (planche). Allt du behöver är en stång, lite utrymme och motivation att bli bättre.</p>
 </details>
 <details class="faq-item">
 <summary class="faq-q">VILKA ÄR VI?<span class="faq-plus faq-icon" aria-hidden="true">+</span></summary>
-<p class="faq-answer">Vi är studenter och alumner.</p>
+<p class="faq-answer">Vi är en gemenskap av studenter, personal och alumner från Aalto, samt vänner från andra universitet och arbetslivet, som älskar att träna tillsammans. Vi är en ideell, medlemsdriven förening. Vi tränar för glädjens och utvecklingens skull, inte för att tävla.</p>
 </details>
 <details class="faq-item">
 <summary class="faq-q">HUR BLIR JAG MEDLEM?<span class="faq-plus faq-icon" aria-hidden="true">+</span></summary>
-<p class="faq-answer">Fyll i <a class="faq-link" href="https://docs.google.com/forms/d/e/1FAIpQLSfZa0ePRcI74dzw7_an0wX0QAKfoaOe_HKKSPf5pS0uRpXw3A/viewform" target="_blank" rel="noopener">Bli medlem-formuläret</a>.</p>
+<p class="faq-answer">Fyll i <a class="faq-link" href="https://docs.google.com/forms/d/e/1FAIpQLSfZa0ePRcI74dzw7_an0wX0QAKfoaOe_HKKSPf5pS0uRpXw3A/viewform" target="_blank" rel="noopener">medlemsformuläret</a> (”Bli medlem” högst upp på sidan) och gå sedan med i vår <a class="faq-link" href="https://t.me/aalto_calisthenics" target="_blank" rel="noopener">Telegram-grupp</a> för att se träningsschemat. Medlemskapet är gratis under vårt första år. Du är också välkommen att komma till ett pass och prova på innan du går med.</p>
 </details>
 <details class="faq-item">
 <summary class="faq-q">VAR TRÄNAR VI?<span class="faq-plus faq-icon" aria-hidden="true">+</span></summary>
-<p class="faq-answer">I Otnäs idrottspark.</p>
+<p class="faq-answer">Mestadels i Otnäs idrottspark i Esbo; använd kartknapparna i Info-avsnittet för vägbeskrivning. Ibland tränar vi också inomhus, särskilt på vintern. Tider och platser för passen meddelas i vår <a class="faq-link" href="https://t.me/aalto_calisthenics" target="_blank" rel="noopener">Telegram-grupp</a>.</p>
 </details>
 <details class="faq-item">
 <summary class="faq-q">KAN VEM SOM HELST GÅ MED?<span class="faq-plus faq-icon" aria-hidden="true">+</span></summary>
-<p class="faq-answer">Ja!</p>
+<p class="faq-answer">Ja! Medlemmar i Aalto-universitetets studentkår (AUS) går med som ordinarie medlemmar, och alla andra är välkomna som externa medlemmar. Du behöver inte studera eller arbeta vid Aalto, och alla är välkomna oavsett nivå, från ditt allra första räckhäv till avancerade färdigheter.</p>
 </details>
 <details class="faq-item">
 <summary class="faq-q">JAG ÄR NYBÖRJARE<span class="faq-plus faq-icon" aria-hidden="true">+</span></summary>
-<p class="faq-answer">Kom och träna med oss!</p>
+<p class="faq-answer">Perfekt, alla börjar någonstans! Passen blandar strukturerad träning med fri träning, och varje övning har en lättare variant, så du kan träna på din egen nivå. Mer erfarna medlemmar hjälper gärna till med tekniken. Kom bara förbi, ta med vatten och kläder som du kan röra dig i, och sätt igång.</p>
 </details>
 <details class="faq-item">
-<summary class="faq-q">JAG ÄR PROFFS<span class="faq-plus faq-icon" aria-hidden="true">+</span></summary>
-<p class="faq-answer">Kom och träna med oss!</p>
+<summary class="faq-q">JAG ÄR ERFAREN<span class="faq-plus faq-icon" aria-hidden="true">+</span></summary>
+<p class="faq-answer">Toppen, kom och träna med oss! Här hittar du folk som sporrar dig, passar dig och som du kan dela färdigheter med. Om du gillar att coacha tar vi gärna emot din hjälp med att leda en workshop eller ge teknikråd till nyare medlemmar.</p>
 </details>
 </section>
 </div>
